@@ -9,6 +9,10 @@ html,body {
   padding: 112px;
 }
 
+.room-fix{
+  padding-left: 0px;
+}
+
 .room-row {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -134,7 +138,6 @@ html,body {
 .room-bot-wrap{
   background-color: #fff;
   display: grid;
-  padding: 12px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 600px 600px 600px;
   grid-column-gap: 45px;
@@ -211,7 +214,6 @@ html,body {
 /* Reviews */
 .review-wrap{
   padding: 112px 0px;
-  margin-left: 12px;
 }
 
 .review-heading{
