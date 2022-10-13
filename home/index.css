@@ -323,7 +323,7 @@ main .banner {
   width: 100%;
   padding: 0;
   /* background: url(https://preview.colorlib.com/theme/brighthotel/images/xbg_2.jpg.pagespeed.ic.4VF9hYXYfd.webp); */
-  background: url(/home/images/banner-1.jpg);
+  background: url(../home/images/banner-1.jpg);
   background-position: 0;
   /* background-size: 150%; */
   background-position: center center;
