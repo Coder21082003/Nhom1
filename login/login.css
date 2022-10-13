@@ -2,7 +2,9 @@
   background-color: rgb(250, 100, 100);
   color: white;
 }
-
+body {
+  font-family: 'Rubik';
+}
 main .heading h1 {
   text-align: center;
   padding: 100px 0 50px 0;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>Rooms page</title>
     <!-- Bootstrap 5 : CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,25 +26,22 @@
     <script type="module" src="/javascript/mainScript.js" defer></script>
     <script type="module" src="/javascript/navigation.js" defer></script>
     <script type="module" src="/javascript/item-move-up.js" defer></script>
-
+    
     <!-- 
         Moi nguoi link file .css va javascript cua trang o day :
     -->
-    <link rel="stylesheet" href="/home/index.css">
-    <script type="module" src="/home/index.js" defer></script>
-
-    <!-- IMPORT FONT -->
+    <link rel="stylesheet" href="rooms.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-
+    
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="container-md">
-                <a href="#" class="navbar__brand">LUXURY HOTEL</a>
+                <a href="/home/index.html" class="navbar__brand">LUXURY HOTEL</a>
                 <div class="navbar-expand-md">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -127,359 +124,274 @@
     </header>
     <main>
         <!-- 
-            Day la cai thanh Booking, Neu ko can thiet thi moi nguoi xoa di nhe.
-         -->
-        <div class="container-md">
-            <div class="row">
-                <div class="col-md">
-                    <div class="booking-container">
-                        <div class="row">
-                            <div class="col-md-3 booking-container__item">
-                                <div>
-                                    <span class="booking-item__title">Check In</span>
-                                    <div class="input-container">
-                                        <input type="date" class="form-control" name="checkin-input" id="checkin-input"
-                                            placeholder="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 booking-container__item">
-                                <div>
-                                    <span class="booking-item__title">Check Out</span>
-                                    <div class="input-container">
-                                        <!-- <label for="checkin-input" class="form-label">Date</label> -->
-                                        <input type="date" class="form-control" name="checkout-input"
-                                            id="checkout-input" placeholder="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="row">
-                                    <div class="col booking-container__item">
-                                        <span class="booking-item__title">Children</span>
-                                        <div class="input-container">
-                                            <select class="form-control" name="children-form" id="children-form">
-                                                <option>0</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>Khác..</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col booking-container__item">
-                                        <span class="booking-item__title">Adult</span>
-                                        <div class="input-container">
-                                            <select class="form-control" name="adult-form" id="adult-form">
-                                                <option>0</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>Khác..</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 booking-container__item" style="display: flex;">
-                                <!-- <button type="button" class="booking__btn">Kiểm tra phòng</button> -->
-                                <button type="button" class="booking__btn">Check Available</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 
 
             Moi nguoi tiep tuc code noi dung cua trang o phia duoi nhe :D
             ...
          -->
-        <section class="services">
+        <section class="rooms-top">
             <div class="container-md">
                 <div class="row">
-                    <div class="col-md">
+                    <div class="col-md" style="padding: 0;">
                         <div class="">
-                            <span class="sub-heading">Services</span>
-                            <h2 class="heading">Facilities & Services</h2>
+                            <span class="sub-heading">Hot rooms</span>
+                            <h2 class="heading">Suitable for you</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/bed.png" alt="images">
-                            <div>
-                                <h3>Luxury Rooms</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
+            <div class="container-md">
+                <div class="room-row">
+                    <div class="room-oder item-move-up">
+                        <div class="room-imgae"><img class="room-img" src="room-img/1.jpg"></div>
+                        <div class="room-des">
+                            <h2 class="heading">Bachelor Room</h2>
+                            <div class="price"><sup>$</sup><span class="number">150</span><sub>/per night</sub></div>
+                            <ul class="room-info">
+                                <li><strong>Adults:</strong> 1</li>
+                                <li><strong>Categories:</strong> Single</li>
+                                <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
+                                <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                <li><strong>Bed Type:</strong> One bed</li>
+                            </ul>
+                            <button class="btn-readmore" type="button" style="margin: 0;">
+                                READ MORE
+                            </button>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/wifi_FILL0_wght400_GRAD0_opsz48.png" alt="images">
-                            <div>
-                                <h3>Fast & Free Wifi</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
+                    <div class="room-oder item-move-up">
+                        <div class="room-des">
+                            <h2 class="heading">Bachelor Room</h2>
+                            <div class="price"><sup>$</sup><span class="number">150</span><sub>/per night</sub></div>
+                            <ul class="room-info">
+                                <li><strong>Adults:</strong> 1</li>
+                                <li><strong>Categories:</strong> Single</li>
+                                <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
+                                <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                <li><strong>Bed Type:</strong> One bed</li>
+                            </ul>
+                            <button class="btn-readmore" type="button" style="margin: 0;">
+                                READ MORE
+                            </button>
+                        </div>
+                        <div class="room-imgae"><img class="room-img" src="room-img/2.jpg"></div>
+                    </div>
+                    <div class="room-oder item-move-up">
+                        <div class="room-imgae"><img class="room-img" src="room-img/3.jpg"></div>
+                        <div class="room-des">
+                            <h2 class="heading">Bachelor Room</h2>
+                            <div class="price"><sup>$</sup><span class="number">150</span><sub>/per night</sub></div>
+                            <ul class="room-info">
+                                <li><strong>Adults:</strong> 1</li>
+                                <li><strong>Categories:</strong> Single</li>
+                                <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
+                                <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                <li><strong>Bed Type:</strong> One bed</li>
+                            </ul>
+                            <button class="btn-readmore" type="button" style="margin: 0;">
+                                READ MORE
+                            </button>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/phone_in_talk_FILL0_wght400_GRAD0_opsz48.png" alt="images">
-                            <div>
-                                <h3>Call Us 24/7</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/minor_crash_FILL0_wght400_GRAD0_opsz48.png" alt="images">
-                            <div>
-                                <h3>Travel Accomodation</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/credit_score_FILL0_wght400_GRAD0_opsz48.png" alt="images">
-                            <div>
-                                <h3>Accepts Credit Card</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="services__item item-move-up">
-                            <img src="images/dinner_dining_FILL0_wght400_GRAD0_opsz48.png" alt="images">
-                            <div>
-                                <h3>Restaurant</h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic.</p>
-                            </div>
-                        </div>
+                </div>
+                <!-- The item moves up when scroll down (HUY)-->
+                <script type="module" src="/javascript/item-move-up.js"></script>
+                <!-- The item moves up when scroll down (HUY)-->
+
+                <div class="more-room-wrap">
+                    <div class="more-room">
+                        <h2 class="heading">More Rooms</h2>
+                        <p class="more-room-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Reprehenderit, iusto, omnis! Quidem, sint, impedit? Dicta eaque delectus tempora hic,
+                            corporis velit doloremque
+                            quod quam laborum, nobis iusto autem culpa quaerat!
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="rooms">
-            <div class="container-md">
-                <div class="row">
-                    <div class="col-md">
-                        <div class="">
-                            <span class="sub-heading">FEATURED ROOMS</span>
-                            <h2 class="heading">Rooms & Suites</h2>
-                            <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Reprehenderit, iusto, omnis!
-                                Quidem, sint, impedit? Dicta eaque delectus tempora hic, corporis velit doloremque quod
-                                quam laborum, nobis iusto autem culpa quaerat!</p>
-                            <a href="/room/rooms.html" alt="Rooms page" class="page-link-custom">READ ALL</a>
+
+            <div class="room-bot">
+                <div class="room-bot-wrap">
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/4.jpg">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-md rooms-container">
-                <button class="back-btn" type="button">
-                    <span class="material-symbols-outlined">
-                        arrow_back_ios
-                    </span>
-                </button>
-                <div class="row card-slider">
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/1-1.jpg" alt="">
-                            </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
-                                    </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
-                                    </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/2-1.jpg" alt="">
-                            </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/5.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
-                                    </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
-                                    </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/2-2.jpg" alt="">
-                            </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/6.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
-                                    </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
-                                    </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/3-1.jpg" alt="">
-                            </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/7.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
-                                    </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
-                                    </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/1.jpg" alt="">
-                            </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/8.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
-                                    </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
-                                    </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card card-1 item-move-up">
-                            <div class="image-container">
-                                <img src="room-img/10.jpg" alt="">
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/9.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
+                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
+                                </ul>
                             </div>
-                            <div class="card-inner">
-                                <h3>Bachelor Room</h3>
-                                <span class="card__cost">
-                                    <sup><small>$</small></sup>156<small>/per night</small>
-                                </span>
-                                <ul class="card__information">
-                                    <li>
-                                        Adults: 1
+                        </div>
+                    </div>
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/10.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Categories: Single
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/11.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Facilities: Closet with hangers, HD flat-screen TV, Telephone
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-bot-detail item-move-up">
+                        <div class="room-bot-img">
+                            <img src="room-img/12.jpg">
+                        </div>
+                        <div class="room-bot-text">
+                            <div class="text">
+                                <h2 class="heading">Bachelor Room</h2>
+                                <div class="price"><sup>$</sup><span class="number">156</span><sub>/per night</sub>
+                                </div>
+                                <ul class="specs">
+                                    <li><strong>Adults:</strong> 1</li>
+                                    <li><strong>Categories:</strong> Single</li>
+                                    <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone
                                     </li>
-                                    <li>
-                                        Size: 20m<sup>2</sup>
-                                    </li>
-                                    <li>
-                                        Bed Type: One bed
-                                    </li>
+                                    <li><strong>Size:</strong> 20m<sup>2</sup></li>
+                                    <li><strong>Bed Type:</strong> One bed</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="next-btn" type="button">
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
-                    </span>
-                </button>
             </div>
         </section>
         <section class="restaurant">
@@ -489,8 +401,6 @@
                         <div class="">
                             <span class="sub-heading">MENUS</span>
                             <h2 class="heading">Restaurant Menu</h2>
-                            <a href="/room/rooms.html" alt="Rooms page" class="page-link-custom"
-                                style="margin-top: 20px;">READ ALL</a>
                         </div>
                     </div>
                 </div>
@@ -643,16 +553,10 @@
                 </div>
             </div>
         </section>
-        <div class="container-fluid banner" id="banner-1">
-            <div>
-                <div>
-                    <h2>Quality accommodation that exceeds the expectations</h2>
-                    <a href="/room/rooms.html" class="btn-1">
-                        LEARN MORE
-                    </a>
-                </div>
-            </div>
-        </div>
+        <!-- Change restaurant tabs -->
+        <script type="module" src="rooms.js"></script>
+        <!-- Change restaurant tabs -->
+
         <section class="review">
             <div class="container-md">
                 <div class="row">
@@ -660,8 +564,6 @@
                         <div class="">
                             <span class="sub-heading">Reviews</span>
                             <h2 class="heading">Guest Reviews</h2>
-                            <a href="/about/about.html" alt="About Us page" class="page-link-custom"
-                                style="margin-top: 20px;">READ ALL</a>
                         </div>
                     </div>
                 </div>
@@ -740,17 +642,7 @@
                             <ul class="card-container">
                                 <li class="card-inner">
                                     <div class="">
-                                        <img src="room-img/1-1.jpg" alt="">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Our Luxury Hotel & Restaurants</h4>
-                                        <span><i class="bi bi-calendar3"></i>Oct 01, 2022</span>
-                                        <span><i class="bi bi-chat-left-dots"></i>12</span>
-                                    </div>
-                                </li>
-                                <li class="card-inner">
-                                    <div class="">
-                                        <img src="room-img/12.jpg"
+                                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
                                             alt="">
                                     </div>
                                     <div class="card-content">
@@ -761,7 +653,18 @@
                                 </li>
                                 <li class="card-inner">
                                     <div class="">
-                                        <img src="room-img/5.jpg"
+                                        <img src="https://aremorch.com/wp-content/uploads/2016/09/The-Details-That-Matter-Top-Things-Every-Luxury-Hotel-Room-Should-Have.png"
+                                            alt="">
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Our Luxury Hotel & Restaurants</h4>
+                                        <span><i class="bi bi-calendar3"></i>Oct 01, 2022</span>
+                                        <span><i class="bi bi-chat-left-dots"></i>12</span>
+                                    </div>
+                                </li>
+                                <li class="card-inner">
+                                    <div class="">
+                                        <img src="https://cdn.gobankingrates.com/wp-content/uploads/2020/03/Hotel-Room-iStock-1161026663.jpg?w=675&quality=75"
                                             alt="">
                                     </div>
                                     <div class="card-content">
