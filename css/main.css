@@ -97,6 +97,9 @@ nav.nav-white {
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
+.btn-custom.active::after {
+  transform: scaleX(1) !important;
+}
 .btn-custom:hover::after {
   animation-name: underline-show;
 }

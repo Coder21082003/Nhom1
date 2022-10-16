@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('.frame-signup').fadeOut();
-    // $(window).scrollTop($(window).height() - 100);
     var position = $('#heading-page').position();
     var hd_top = position.top;
     
