@@ -9,6 +9,11 @@ html,body {
 .room-detail-wrap{
     margin: 0px 124px 0px 124px;
 }
+@media only screen and (max-width: 768px) {
+  .room-detail-wrap {
+    margin: 0 15px;
+  }
+}
 /* Room pic */
 .room-detail-pic{
     display: grid;

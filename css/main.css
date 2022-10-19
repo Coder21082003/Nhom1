@@ -482,7 +482,9 @@ footer .copyright-container {
   .navbar-nav a:focus,
   .navbar-nav a:active {
     color: black;
-    font-weight: bold;
+  }
+  .navbar-nav a.btn-booking {
+    color: white !important;
   }
   header .btn-1 {
     padding: 10px 20px;
