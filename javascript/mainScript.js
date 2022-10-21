@@ -1,4 +1,15 @@
 $(document).ready(function() {
+    
+    // var loading_screen = function(times) {
+    //     $('html').css('overflow-y', 'hidden');
+    //     $('.loading-container').fadeIn();
+    //     setTimeout(() => {
+    //     $('html').css('overflow-y', 'auto');
+    //     $('.loading-container').fadeOut();
+    //     }, times);
+    // };
+    // loading_screen(2000);
+
     $('.carousel').carousel();
     $(this).scroll(function () {
         let heightTop = $(this).scrollTop();
@@ -9,4 +20,5 @@ $(document).ready(function() {
     $('.btn-back-top').click(function() {
        $(window).scrollTop(0);
     });
+
 })

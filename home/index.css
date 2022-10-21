@@ -6,38 +6,23 @@
 body {
   /* font-family: 'Raleway', sans-serif; */
 
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 ::selection {
   background-color: rgb(250, 100, 100);
   color: white;
 }
-
-.page-link-custom {
-  color: blueviolet;
-  text-decoration: none;
-  display: inline-block;
-  width: fit-content;
+#heading-page .row {
+  row-gap: 12px;
 }
-.page-link-custom::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: center left;
-  background-color: blueviolet;
-  animation-duration: 0.3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
-.page-link-custom:hover::after {
-  animation-name: underline-show;
-}
-.page-link-custom:not(:hover)::after {
-  animation-name: underline-leave;
+#heading-page .box {
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 100px;
+  background-color: rgba(245, 245, 245, 1);
 }
 
+/* SECTION : SERVICES */
 section.services {
   display: block;
   margin: 100px 0 50px 0;
@@ -67,11 +52,7 @@ section .heading {
 .services .row:not(:last-child) {
   margin: 0 0 100px 0;
 }
-@media only screen and (min-width:400px) and (max-width: 600px) {
-  .services .row>.col-sm-4 {
-    width: 50%;
-  }
-}
+
 .services__item {
   display: flex;
   cursor: pointer;
@@ -361,6 +342,7 @@ section.review {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+  width: 100%;
 }
 .review-container .reviewer {
   margin-bottom: 30px;
@@ -410,7 +392,18 @@ section.review {
   transition: all 1s ease-in-out;
   transform: translate(0, 50vh);
 }
-
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .services .row > .col-sm-4 {
+    width: 50%;
+  }
+  .services__item {
+    flex-wrap: wrap;
+  }
+  .services__item img {
+    height: 70px !important;
+    width: fit-content !important;
+  }
+}
 @media only screen and (max-width: 750px) {
   section .container-md {
     padding-left: 12px;
@@ -478,7 +471,6 @@ section.review {
     flex-wrap: wrap;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .review-container {
     flex-wrap: nowrap;

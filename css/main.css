@@ -10,11 +10,49 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
+main #heading-page h1 {
+  text-align: center;
+  padding: 100px 0 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+main #heading-page h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 50px;
+  background-color: rgb(150, 150, 150);
+}
 .item-move-up {
   opacity: 0;
   transform: translate(0, 100px);
   transition: all 0.6s ease-in-out;
+}
+
+.page-link-custom {
+  color: blueviolet;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+.page-link-custom::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center left;
+  background-color: blueviolet;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.page-link-custom:hover::after {
+  animation-name: underline-show;
+}
+.page-link-custom:not(:hover)::after {
+  animation-name: underline-leave;
 }
 /* 
 ------------------------------
@@ -67,6 +105,65 @@ nav .btn-booking {
 nav .btn-booking:hover {
   color: var(--text-color-1);
   border-color: var(--text-color-1);
+}
+.nav-item {
+  position: relative;
+}
+.navbar-nav .more-info {
+  display: none;
+  transform-origin: 50px -20px;
+  position: absolute;
+  top: 100%;
+  color: #000000;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-item:hover .more-info {
+  display: block;
+}
+.nav-item .more-info a {
+  color: blueviolet;
+}
+.navbar-nav .more-info::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.navbar-nav .more-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+.navbar-nav ul li {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: fit-content;
+}
+.navbar-nav ul li:hover {
+  color: #fc3c3c;
+  background-color: whitesmoke;
+}
+.navbar-nav ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.navbar-nav ul li .thumbnail {
+  width: 150px;
+  height: fit-content;
+}
+.navbar-nav ul li .thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 nav.nav-white {
   position: fixed;
@@ -260,6 +357,7 @@ select {
   font-size: 14pt;
 }
 .booking-container .row {
+  row-gap: 10px;
   height: 100%;
 }
 .booking-container__item {
@@ -291,6 +389,23 @@ select {
   margin-bottom: 0;
   border: 2px solid #fc3c3c;
   transition: 0.2s ease-in-out;
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .booking-container .row .col-md-3:nth-child(1),
+  .booking-container .row .col-md-3:nth-child(2) {
+    width: 100%;
+  }
+  .booking-container .row .col-md-3:nth-child(3) {
+    width: 100%;
+  }
+  .booking-container__item {
+    width: 100% !important;
+  }
+  .booking__btn {
+    margin-top: 10px;
+    width: 100% !important;
+    padding: 10px 20px;
+  }
 }
 .booking__btn:hover {
   border: 2px solid #fc3c3c;
@@ -357,7 +472,6 @@ footer .col-md:nth-of-type(3) .footer__item i {
   border-color: #fc3c3c;
   color: white;
 }
-
 
 .footer__item .btn-1:hover {
   background: none;
@@ -558,4 +672,64 @@ footer .copyright-container {
     font-size: 12px;
     width: 80%;
   }
+}
+
+.center {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes loading {
+  0% {
+    height: 50px;
+    top: 0px;
+  }
+
+  50% {
+    height: 70px;
+    top: -10px;
+  }
+
+  100% {
+    height: 50px;
+    top: 0px;
+  }
+}
+.loading-container {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: whitesmoke;
+}
+
+#loading {
+  position: absolute;
+  background-color: #000000;
+  height: 50px;
+  width: 15px;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+#loading.loading1 {
+  left: -25px;
+  animation-delay: 0.2s;
+}
+
+#loading.loading2 {
+  left: 0px;
+  animation-delay: 0.4s;
+}
+
+#loading.loading3 {
+  left: 25px;
+  animation-delay: 0.6s;
 }
