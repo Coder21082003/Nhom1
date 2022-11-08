@@ -36,6 +36,12 @@ section .heading {
   font-size: 45px;
   margin: 20px 0 0 0;
 }
+
+section .description {
+  width: 50%;
+  color: rgb(150, 150, 150);
+  line-height: 25px;
+}
 /* END OF : HEADING OF SECTIONS */
 
 .rooms-top {

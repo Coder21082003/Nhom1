@@ -12,6 +12,12 @@ body {
   background-color: rgb(250, 100, 100);
   color: white;
 }
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #heading-page .row {
   row-gap: 12px;
 }
@@ -101,7 +107,7 @@ section .container-md {
   display: block;
   position: relative;
 }
-.rooms .description {
+section .description {
   width: 50%;
   color: rgb(150, 150, 150);
   line-height: 25px;
@@ -475,4 +481,44 @@ section.review {
   .review-container {
     flex-wrap: nowrap;
   }
+}
+.frame-mess {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.message-box {
+  background-color: white;
+  display: block;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: #000;
+  width: 600px;
+  position: fixed !important;
+  z-index: 5;
+  max-width: 90vw;
+}
+.message__btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: none;
+  border: none;
+  color: #ffffff;
+}
+.message__head {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  min-height: 20px;
+  background-color: #353535;
+  padding: 7px 20px;
+}
+.message__content {
+  padding: 20px;
+  font-size: 20px;
 }

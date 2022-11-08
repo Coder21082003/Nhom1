@@ -10,7 +10,10 @@ $(document).ready(function() {
     // };
     // loading_screen(2000);
 
+    
     $('.carousel').carousel();
+    // $('.carousel').carousel('prev');
+
     $(this).scroll(function () {
         let heightTop = $(this).scrollTop();
         $('.carousel-image').css({
