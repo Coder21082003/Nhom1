@@ -606,6 +606,9 @@ footer .copyright-container {
   .navbar-nav a.btn-booking {
     color: white !important;
   }
+  .navbar-nav a.btn-booking:hover {
+    color: black !important;
+  }
   header .btn-1 {
     padding: 10px 20px;
   }
