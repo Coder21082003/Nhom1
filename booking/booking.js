@@ -1,4 +1,5 @@
 import Box_change from "../account/box-change.js";
+import autoScroll from "../javascript/autoScroll.js";
 import checkInput from "./validInput.js";
 import messageBox from "../home/message.js";
 
@@ -9,7 +10,7 @@ const autoScroll = function () {
 };
 
 $(document).ready(function () {
-  autoScroll();
+  //autoScroll();
 
   var nameRoom = "";
   var nameClient = "";
