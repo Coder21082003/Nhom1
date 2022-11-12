@@ -383,6 +383,7 @@ section.review {
   margin: 0;
 }
 .review .card-3 {
+  position: relative;
   padding: 30px;
   width: 100%;
   min-height: 200px;

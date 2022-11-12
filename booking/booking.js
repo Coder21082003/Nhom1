@@ -1,9 +1,11 @@
 import Box_change from "../account/box-change.js";
 import autoScroll from "../javascript/autoSCroll.js";
+import checkInput from "./validInput.js";
+import messageBox from "../home/message.js";
 
 $(document).ready(function () {
   autoScroll();
-  
+
   var nameRoom = "";
   var nameClient = "";
   var checkin = "";
@@ -25,11 +27,17 @@ $(document).ready(function () {
     checkout = $('input[name="checkout"]').val();
     nameClient = $('input[name="nameClient"]').val();
     console.log(nameRoom, nameClient, checkin, checkout);
-
-    var currBox = new Box_change(nameRoom, nameClient, checkin, checkout);
-    $("main .box-change .box-change-content").html(currBox.htmlScope());
-    $("main .box-change").show(300);
-    $("body").append(`<div class="mask-box-order"></div>`);
-    $("input").prop("disabled", true);
+    if (checkInput(nameRoom, nameClient, checkin, checkout)) {
+      var currBox = new Box_change(nameRoom, nameClient, checkin, checkout);
+      $("main .box-change .box-change-content").html(currBox.htmlScope());
+      $("main .box-change").show(300);
+      $("body").append(`<div class="mask-box-order"></div>`);
+      $("input").prop("disabled", true);
+    } else {
+      var mess = new messageBox('Notification', 'Your information is wrong format. Please try again.')
+      $('.frame-mess .message-box').html(mess.displayMess());
+      $('.frame-mess').show();
+      console.log('successfully');
+    }
   });
 });
