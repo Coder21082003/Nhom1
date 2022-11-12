@@ -1,7 +1,9 @@
 // import {Box_change} from './box-change'
 import Box_change from "./box-change.js";
+import autoScroll from "../javascript/autoSCroll.js";
 
 $(document).ready(function () {
+  autoScroll();
   $(".options__item__name").click(function () {
     $(this).next().toggle("slow");
   });

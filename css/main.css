@@ -549,6 +549,7 @@ footer .copyright-container {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 @keyframes btn-back-top-move {
   0% {
     transform: translate(0, -5px);
