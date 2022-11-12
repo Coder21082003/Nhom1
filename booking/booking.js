@@ -1,7 +1,12 @@
 import Box_change from "../account/box-change.js";
-import autoScroll from "../javascript/autoScroll.js";
 import checkInput from "./validInput.js";
 import messageBox from "../home/message.js";
+
+const autoScroll = function () {
+  var position = $("#heading-page").position();
+  var hd_top = position.top;
+  setTimeout(() => $(window).scrollTop(hd_top - 50), 500);
+};
 
 $(document).ready(function () {
   autoScroll();
@@ -34,10 +39,13 @@ $(document).ready(function () {
       $("body").append(`<div class="mask-box-order"></div>`);
       $("input").prop("disabled", true);
     } else {
-      var mess = new messageBox('Notification', 'Your information is wrong format. Please try again.')
-      $('.frame-mess .message-box').html(mess.displayMess());
-      $('.frame-mess').show();
-      console.log('successfully');
+      var mess = new messageBox(
+        "Notification",
+        "Your information is wrong format. Please try again."
+      );
+      $(".frame-mess .message-box").html(mess.displayMess());
+      $(".frame-mess").show();
+      console.log("successfully");
     }
   });
 });

@@ -1,6 +1,10 @@
 // import {Box_change} from './box-change'
 import Box_change from "./box-change.js";
-import autoScroll from "../javascript/autoSCroll.js";
+const autoScroll = function () {
+  var position = $("#heading-page").position();
+  var hd_top = position.top;
+  setTimeout(() => $(window).scrollTop(hd_top - 50), 500);
+};
 
 $(document).ready(function () {
   autoScroll();
