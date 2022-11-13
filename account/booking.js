@@ -1,4 +1,5 @@
 import readTextFile from "../javascript/loadFile.js";
+
 function handleName(txt) {
   var res = "";
   for (var x of txt) {

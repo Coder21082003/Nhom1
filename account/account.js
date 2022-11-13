@@ -1,4 +1,3 @@
-// import {Box_change} from './box-change'
 import Box_change from "./box-change.js";
 const autoScroll = function () {
   var position = $("#heading-page").position();
