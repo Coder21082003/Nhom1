@@ -1,287 +1,213 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik';
     box-sizing: border-box;
+    font-family: rubik;
 }
-
-header {
-    padding-bottom: 10px;
-}
-
-.wrap {
-    background: url(./images/pic1.jpg);
-    overflow: hidden;
-    background-size: cover;
-    padding-bottom: 40px;
-    background-position: center center;
-}
-
-footer {
-    padding-top: 0;
+footer{
     margin-top: 10px;
-
+}
+.wrap {
+    background-image: url(./images/pic1.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    margin-top: 10px;
 }
 
-.head {
+.wrap .head {
     text-align: center;
+
 }
 
-.head h1 {
-    /* font-family: 'Times New Roman', Times, serif; */
-    padding-top: 20px;
+.wrap .head h1 {
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
     font-size: 100px;
     color: white;
-
+    font-weight: 500;
 }
 
-.head p {
+.wrap .head p {
     font-style: italic;
+    font-size: 15px;
     color: white;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-    font-size: 18px;
 }
 
-section {
+.container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    margin: 40px;
 }
 
-section .container {
-    position: relative;
-    min-width: 1100px;
-    min-height: 550px;
-    display: flex;
-    z-index: 5;
-}
-
-/* PHAN REDBOX------------------- */
-
-.containerinfo {
+/* PHAN RED BOX */
+.container .container_infor {
     position: absolute;
-    top: 40px;
-    left: 0;
-    min-width: 350px;
-    width: 350px;
-    height: calc(100% - 80px);
-    background: red;
+    left: 70px;
+    background-color: red;
+    height: 420px;
+    width: 330px;
+    top: 32px;
     z-index: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-    /* left: 1000px; */
 }
 
 h2 {
-    color: #fff;
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-.containerinfo li {
-    position: relative;
-    list-style: none;
-    display: flex;
-    margin: 20px 0;
-    cursor: pointer;
-    align-items: flex-start;
-}
-/* phan noi dung */
-.containerinfo li span {
-    color: #fff;
-    margin-left: 10px;
-    font-weight: 300;
-    opacity: 0.5;
-    font-size: 20px;
-    transition: all 0.2s ease-in-out;
-}
-
-/*Hiệu Ứng Hover Cho Thẻ Li*/
-.containerinfo li:hover span {
-    opacity: 1;
-}
-
-.sci {
-    position: relative;
-    display: flex;
-}
-
-.sci li {
-    list-style: none;
-    margin-right: 15px;
-}
-
-.sci li a {
-    text-decoration: none;
-    opacity: 0.5;
-    color: white;
-    font-size: 32px;
-}
-
-/*Hiệu Ứng Hover Icon*/
-.sci li:hover a {
-    opacity: 1;
-}
-
-
-/* PHAN WHITEBOX---------------------------------- */
-
-.containerForm {
-    position: absolute;
-    padding: 70px 50px;
-    background: whitesmoke;
-    /* ---- */
-    margin-left: 150px;
-    padding-left: 250px;
-    /* ----- */
-    width: calc(100% - 150px);
-    height: 100%;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
-    
-}
-
-.containerForm h2 {
-    color: #0f3959;
-    font-size: 30px;
-    text-transform: uppercase;
-    /* font-weight: bold; */
-    letter-spacing: 2px;
-    font-weight: 500;
-}
-
-.formBox {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    text-align: center;
+    color: rgb(240, 227, 227);
     padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 30px;
+
 }
 
-.inputBox {
-    position: relative;
-    margin: 0 0 35px 0;
+li {
+    list-style: none;
+
 }
 
-.formBox .inputBox.w50 {
-    width: 47%;
+/* phan thong tin  */
+.container_infor .infor li {
+    font-size: 17px;
+    color: white;
+    opacity: 0.5;
+    padding: 8px 40px;
+    transition: 0.3s;
+
 }
 
-.inputBox.w100 {
-    width: 100%;
-}
-
-section .container .containerForm .formBox .inputBox input,
-section .container .containerForm .formBox .inputBox textarea {
-    width: 100%;
-    padding: 10px 5px 5px 15px;
-    resize: none;
-    font-size: 18px;
-    font-weight: 400;
-    color: #333;
-    border: none;
-    /* border-bottom: 1px solid #777; */
-
-    border: 1px rgba(0, 0, 0, 0) solid;
-    border-bottom: 1px solid #777;
-
-    outline: none;
-}
-
-section .container .containerForm .formBox .inputBox input:focus,
-section .container .containerForm .formBox .inputBox textarea:focus {
-    border: 1px rgb(215, 38, 38) solid;
-}
-
-section .container .containerForm .formBox .inputBox textarea {
-    min-height: 120px;
-}
-
-section .container .containerForm .formBox .inputBox input[type="submit"] {
-    position: relative;
+.container_infor .infor li:hover {
+    opacity: 0.8;
     cursor: pointer;
-    background: #0f3959;
-    color: #fff;
-    border: none;
-    max-width: 150px;
-    padding: 12px;
-    transition: all 0.2s ease-in-out;
-    
 }
 
-section .container .containerForm .formBox .inputBox input[type="submit"]:hover {
-    background: rgb(215, 38, 38);
+/* phan icon */
+.container_infor .icon {
+    font-size: 35px;
+    display: flex;
+    margin-top: 45px;
+    padding-left: 47px;
+
 }
 
-.inputBox span {
+.container_infor .icon i {
+    padding: 10px;
+    color: white;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.icon i:hover {
+    opacity: 1;
+
+}
+
+/* PHAN WHITEBOX */
+.container .container-form {
     position: absolute;
-    left: 15px;
-    padding: 5px 0;
-    font-size: 18px;
-    font-weight: 400;
-    color: #333;
-    transition: 0.5s;
-    pointer-events: none;
+    height: 470px;
+    width: 80%;
+    top: 5px;
+    right: 30px;
+    padding-left: 200px;
+    margin-left: 350px;
+    background-color: whitesmoke;
 }
 
-.inputBox input:focus~span,
-.inputBox textarea:focus~span,
-.inputBox input:valid~span,
-.inputBox textarea:valid~span {
-    transform: translateY(-30px);
+.container .container-form h2 {
+    padding: 20px 200px;
+    font-size: 35px;
+    color: rgb(94, 91, 91);
+}
+
+/* phan dien thong tin  */
+.container .container-form .formbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* phan dien ho ten  */
+.formbox .box1 {
+    position: relative;
+    width: 50%;
+    padding-top: 20px;
+
+}
+
+.formbox .box1 span {
+    position: absolute;
+    left: 10px;
+    top: 26px;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+
+.formbox .box1 input {
+    width: 400px;
+    height: 35px;
+}
+
+/* dien loi nhan  */
+.formbox .box2 {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.formbox .box2 textarea {
+    width: 97%;
+    height: 120px;
+}
+
+.formbox .box2 span {
+    position: absolute;
+    left: 10px;
+    top: 26px;
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+/* nut send */
+.formbox .box3 {
+    padding: 20px;
+}
+
+.formbox .box3 input {
+    padding: 13px 33px;
+    color: white;
+    background: #0f3959;
+    margin: 0 auto;
+    font-weight: 700;
+
+}
+
+.box3 input:hover {
+    cursor: pointer;
+    background-color: rgb(239, 83, 83);
+    border: none;
+}
+
+.box3 input:focus {
+    background-color: red;
+    border: none;
+}
+
+.box1 input:focus~span,
+.box2 textarea:focus~span,
+.box1 input:valid~span,
+.box2 textarea:valid~span {
+    transform: translateY(-20px);
     font-size: 12px;
-    left: 0px;
-
     font-weight: 400;
-    letter-spacing: 1px;
     color: #ff568c;
+    left: 0;
 }
- 
 
-/* PHAN RESPONSIVE */
-@media only screen and (max-width: 1000px) {
-    section {
-        padding: 0 12px;
-        width: 100%;
-    }
-
-    section .container {
-        width: 100%;
-        padding: 0;
-        min-width: 0;
-        display: block;
-        height: fit-content;
-    }
-
-    .containerinfo {
-        position: relative;
-        width: 100%;
-        padding: 20px;
-        top: 0;
-    }
-
-    .wrap {
-        padding: 50px 0;
-    }
-
-    .wrap .head h1 {
-        font-size: 50px;
-    }
-
-    .wrap .head p {
-        font-size: 12px;
-    }
-
-    .containerForm {
-        position: relative;
-        left: 0;
-        top: 100%;
-        margin: 0;
-        width: 100%;
-        padding: 20px;
-    }
+.box1 input:focus,
+.box2 textarea:focus {
+    border: 1px rgb(215, 38, 38) solid;
+    outline: none;
 }
