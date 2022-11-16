@@ -7,13 +7,12 @@ $(document).ready(function () {
 
     var curr = parseInt($(this).attr("data-dot-id"));
 
-    console.log(curr);
-
     let prevElement = $(".evaluate-item.active");
     prevElement.css({
       position: "absolute",
       "animation-name": "OUTmove",
     });
+  
     $(".evaluate-item").css("position", "").removeClass("active");
     
     $(`.evaluate-item:nth-of-type(${curr})`)
