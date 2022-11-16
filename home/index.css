@@ -83,7 +83,7 @@ section .heading {
   filter: grayscale(60%) contrast(250%);
 }
 .services__item img {
-  width: 70px;
+  width: 50px;
   height: 50px;
   object-fit: cover;
   margin: 0 20px 0 0;
@@ -296,6 +296,10 @@ section.restaurant {
 }
 .restaurant__menu .card-info {
   padding: 30px;
+}
+.restaurant__menu .card-info p {
+  font-size: 14px;
+  color: rgb(150, 150, 150);
 }
 .restaurant__menu .card-cost {
   font-size: 40px;
